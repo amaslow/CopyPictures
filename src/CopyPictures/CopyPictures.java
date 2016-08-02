@@ -8,8 +8,8 @@ import java.util.Date;
 public class CopyPictures {
 
     public static void main(String[] args) throws IOException {
-        File file = new File("X:\\Smartwares - Product Content\\PRODUCTS\\");
-        File dst = new File("X:\\Smartwares - Product Content\\Product_pictures\\HR_pictures_2\\");
+        File file = new File("\\\\172.16.55.197\\design\\Smartwares - Product Content\\PRODUCTS\\");
+        File dst = new File("\\\\172.16.55.197\\design\\Smartwares - Product Content\\Product_pictures\\HR_pictures_2\\");
         FileWriter fw = new FileWriter("H:/Logs/CopyHRPictures.log", true);
         BufferedWriter bw = new BufferedWriter(fw);
 
@@ -21,7 +21,7 @@ public class CopyPictures {
         });
         DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
         for (int i = 0; i < directories.length; i++) {
-            File src = new File("X:\\Smartwares - Product Content\\PRODUCTS\\" + directories[i] + "\\HR_" + directories[i] + "_2.jpg");
+            File src = new File("\\\\172.16.55.197\\design\\Smartwares - Product Content\\PRODUCTS\\" + directories[i] + "\\HR_" + directories[i] + "_2.jpg");
             File dstFile = new File(dst + "\\HR_" + directories[i] + "_2.jpg");
             if ((src.exists() && !dstFile.exists()) || ((new Date(src.lastModified())).after(new Date(new Date().getTime() - (1 * 1000 * 60 * 60 * 24))))) {
                 System.out.println(src + " - " + dateFormat.format(src.lastModified()));
