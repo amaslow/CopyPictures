@@ -10,7 +10,8 @@ public class CopyPictures {
     public static void main(String[] args) throws IOException {
         File file = new File("\\\\172.16.55.197\\design\\Smartwares - Product Content\\PRODUCTS\\");
         File dst = new File("\\\\172.16.55.197\\design\\Smartwares - Product Content\\Product_pictures\\HR_pictures_2\\");
-        FileWriter fw = new FileWriter("H:/Logs/CopyHRPictures.log", true);
+        String logFile = "\\\\srvdata\\Data\\Automatisering\\Artur\\Logs\\CopyHRPictures.log";
+        FileWriter fw = new FileWriter(logFile, true);
         BufferedWriter bw = new BufferedWriter(fw);
 
         String[] directories = file.list(new FilenameFilter() {
