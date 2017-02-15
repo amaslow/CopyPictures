@@ -24,7 +24,7 @@ public class CopyPictures {
         for (int i = 0; i < directories.length; i++) {
             File src = new File("\\\\172.16.55.197\\design\\Smartwares - Product Content\\PRODUCTS\\" + directories[i] + "\\HR_" + directories[i] + "_2.jpg");
             File dstFile = new File(dst + "\\HR_" + directories[i] + "_2.jpg");
-            if ((src.exists() && !dstFile.exists()) || ((new Date(src.lastModified())).after(new Date(new Date().getTime() - (1 * 1000 * 60 * 60 * 24))))) {
+            if ((src.exists() && !dstFile.exists()) || ((new Date(src.lastModified())).after(new Date(new Date().getTime() - ((long)1 * 1000 * 60 * 60 * 24))))) {
                 System.out.println(src + " - " + dateFormat.format(src.lastModified()));
                 bw.newLine();
                 bw.write(dateFormat.format(new Date()));
